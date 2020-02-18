@@ -1,5 +1,13 @@
 # AngularTraining
 
+## Prerequisites
+* Node / NVM
+* NPM
+
+## Install Angular CLI
+`npm install -g @angular/cli`
+Install Angular CLI Globally
+
 ## Create single project in workplace
 `ng new [projectName] —directory=[projectName]`
 if you want to write your project in existing directory such as created by GitHub
