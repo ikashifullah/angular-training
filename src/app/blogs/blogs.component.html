@@ -1,0 +1,9 @@
+<input [(ngModel)]="blog.title" />
+<h5>{{ blog.title | titlecase }} <span>{{ blog.author }}</span></h5>
+<textarea [(ngModel)]="blog.content"></textarea>
+<div>
+    Preview: 
+    <pre>
+        {{ blog.content }}
+    </pre>
+</div>
