@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 import { AddBookComponent } from './add-book/add-book.component';
+import { NewsLetterFormComponent } from './news-letter-form/news-letter-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BlogsComponent,
     BlogDetailComponent,
-    AddBookComponent
+    AddBookComponent,
+    NewsLetterFormComponent
   ],
   imports: [
     BrowserModule,
