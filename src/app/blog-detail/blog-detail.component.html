@@ -1,0 +1,9 @@
+<div class="row" *ngIf="blog">
+    <h2>{{blog.title | uppercase}} Details</h2>
+    <div><span>id: </span>{{blog.id}}</div>
+    <div>
+        <label>Content:
+            <input [(ngModel)]="blog.body" placeholder="content" />
+        </label>
+    </div>
+</div>

@@ -1,9 +1,11 @@
-<input [(ngModel)]="blog.title" />
-<h5>{{ blog.title | titlecase }} <span>{{ blog.author }}</span></h5>
-<textarea [(ngModel)]="blog.content"></textarea>
-<div>
-    Preview: 
-    <pre>
-        {{ blog.content }}
-    </pre>
+<div *ngFor="let blog of blogs">
+    <a (click)="onSelect(blog)">
+        <div>
+            <h2>{{ blog.title | titlecase }}</h2>
+            <span>July 19, 2019</span>
+            <br />
+            <textarea [(ngModel)]="blog.body"></textarea>
+        </div>
+    </a>
 </div>
+<app-blog-detail [blog]="selectedBlog"></app-blog-detail>
