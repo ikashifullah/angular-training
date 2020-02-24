@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-add-book',
@@ -8,7 +8,10 @@ import { FormControl } from '@angular/forms';
 })
 export class AddBookComponent implements OnInit {
 
-  title = new FormControl('A book name');
+  new_book = new FormGroup({
+    title: new FormControl('A book name'),
+    body: new FormControl('some details')
+  });
 
   constructor() { }
 
