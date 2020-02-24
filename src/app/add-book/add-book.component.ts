@@ -25,6 +25,10 @@ export class AddBookComponent implements OnInit {
     return this.newBook.get('features') as FormArray;
   }
 
+  addFeature() {
+    this.features.push(this.fb.control(''));
+  }
+
   onSubmit() {
     console.log(this.newBook.value);
   }
