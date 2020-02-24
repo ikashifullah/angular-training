@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-book',
@@ -9,8 +9,8 @@ import { FormBuilder } from '@angular/forms';
 export class AddBookComponent implements OnInit {
 
   newBook = this.fb.group({
-    title: ['A book name'],
-    body: ['some details']
+    title: ['A book name', Validators.required],
+    body: ['some details', Validators.required]
   });
 
   constructor(private fb: FormBuilder) { }
