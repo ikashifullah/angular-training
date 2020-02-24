@@ -21,6 +21,10 @@ export class AddBookComponent implements OnInit {
   ngOnInit() {
   }
 
+  get features() {
+    return this.newBook.get('features') as FormArray;
+  }
+
   onSubmit() {
     console.log(this.newBook.value);
   }
