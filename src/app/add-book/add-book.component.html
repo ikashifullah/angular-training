@@ -12,6 +12,17 @@
       Body:
       <input type="text" formControlName="body">
     </label>
+
+    <div formArrayName="features">
+        <h3>Features</h3> <button (click)="addFeature()">Add a Feature</button>
+        <div *ngFor="let feature of features.controls; let i=index">
+          <!-- The repeated feature template -->
+          <label>
+            Feature:
+            <input type="text" [formControlName]="i">
+          </label>
+        </div>
+    </div>
   
     <button type="submit" [disabled]="!newBook.valid">Submit</button>
 
