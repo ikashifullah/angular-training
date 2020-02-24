@@ -1,6 +1,6 @@
 <div class="container">
     <h1>Subscribe our News Letter</h1>
-    <form #newsLetterForm="ngForm">
+    <form (ngSubmit)="onSubmit()" #newsLetterForm="ngForm">
       <div class="form-group">
         <label for="first-name">First Name</label>
         <input type="text" #firstName="ngModel" class="form-control" [(ngModel)]="model.firstName" name="firstName" id="first-name" required>

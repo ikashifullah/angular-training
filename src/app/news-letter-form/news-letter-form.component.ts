@@ -15,4 +15,8 @@ export class NewsLetterFormComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSubmit() {
+    console.log('Form submitted', this.model);
+  }
+
 }
