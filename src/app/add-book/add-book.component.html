@@ -1,5 +1,13 @@
-<label>
-    Title:
-    <input type="text" [formControl]="title">
-    {{ title.value }}
-  </label>
+<form [formGroup]="newBook">
+  
+    <label>
+      Title:
+      <input type="text" formControlName="title">
+    </label>
+  
+    <label>
+      Body:
+      <input type="text" formControlName="body">
+    </label>
+  
+  </form>

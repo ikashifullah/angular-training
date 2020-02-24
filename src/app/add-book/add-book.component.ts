@@ -8,7 +8,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class AddBookComponent implements OnInit {
 
-  new_book = new FormGroup({
+  newBook = new FormGroup({
     title: new FormControl('A book name'),
     body: new FormControl('some details')
   });
