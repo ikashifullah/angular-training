@@ -3,7 +3,8 @@
     <form #newsLetterForm="ngForm">
       <div class="form-group">
         <label for="first-name">First Name</label>
-        <input type="text" class="form-control" [(ngModel)]="model.firstName" name="firstName" id="first-name" required>
+        <input type="text" #spy class="form-control" [(ngModel)]="model.firstName" name="firstName" id="first-name" required>
+        <span> {{ spy.className }} </span>
       </div>
 
       <div class="form-group">
