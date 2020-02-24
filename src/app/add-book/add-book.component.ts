@@ -18,4 +18,8 @@ export class AddBookComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSubmit() {
+    console.log(this.newBook.value);
+  }
+
 }

@@ -1,4 +1,4 @@
-<form [formGroup]="newBook">
+<form [formGroup]="newBook" (ngSubmit)="onSubmit()">
   
     <label>
       Title:
@@ -10,4 +10,6 @@
       <input type="text" formControlName="body">
     </label>
   
+    <button type="submit" [disabled]="!newBook.valid">Submit</button>
+
   </form>
