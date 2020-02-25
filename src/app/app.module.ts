@@ -8,7 +8,7 @@ import { BlogsComponent } from './blogs/blogs.component';
 import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 import { AddBookComponent } from './add-book/add-book.component';
 import { NewsLetterFormComponent } from './news-letter-form/news-letter-form.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +21,8 @@ import { NewsLetterFormComponent } from './news-letter-form/news-letter-form.com
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
