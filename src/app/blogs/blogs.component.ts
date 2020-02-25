@@ -22,7 +22,9 @@ export class BlogsComponent implements OnInit {
   }
 
   getBlogs(): void {
-    this.blogs = this.blogService.getBlogs();
+    this.blogService.getBlogs().subscribe((response) => {
+      this.blogs = response;
+    });
   }
 
 }

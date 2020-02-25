@@ -1,15 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Blog } from './blog';
-import { BLOGS } from './mock-blogs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BlogService {
 
-  constructor() { }
+  private postUrl = 'https://jsonplaceholder.typicode.com/posts';  // URL to web api
 
-  getBlogs(): Blog[] {
-    return BLOGS;
+  constructor(private http: HttpClient) { }
+
+  getBlogs(): Observable<Blog[]> {
+    return this.http.get<Blog[]>(this.postUrl);
   }
 }
