@@ -1,3 +1,4 @@
+<div *ngIf="!blog"> Blog Details is loading ... </div>
 <div class="row" *ngIf="blog">
     <h2>{{blog.title | uppercase}} Details</h2>
     <div><span>id: </span>{{blog.id}}</div>
