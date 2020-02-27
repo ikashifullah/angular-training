@@ -15,4 +15,10 @@ export class BlogService {
   getBlogs(): Observable<Blog[]> {
     return this.http.get<Blog[]>(this.postUrl);
   }
+
+  getBlog(id: number): Observable<Blog> {
+    const blogDetailURL = `https://jsonplaceholder.typicode.com/posts/${id}`;  // URL to web api;
+    // TODO: send the message _after_ fetching the hero
+    return this.http.get<Blog>(blogDetailURL);
+  }
 }
