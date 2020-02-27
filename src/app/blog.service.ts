@@ -17,8 +17,7 @@ export class BlogService {
   }
 
   getBlog(id: number): Observable<Blog> {
-    const blogDetailURL = `https://jsonplaceholder.typicode.com/posts/${id}`;  // URL to web api;
-    // TODO: send the message _after_ fetching the hero
+    const blogDetailURL = `${this.postUrl}/${id}`;
     return this.http.get<Blog>(blogDetailURL);
   }
 }
