@@ -1,5 +1,3 @@
-<input id="name" name="name" />
-<app-add-book></app-add-book>
 <div *ngFor="let blog of blogs">
     <a (click)="onSelect(blog)">
         <div>
@@ -10,6 +8,3 @@
         </div>
     </a>
 </div>
-<app-blog-detail [blog]="selectedBlog"></app-blog-detail>
-<hr>
-<app-news-letter-form></app-news-letter-form>

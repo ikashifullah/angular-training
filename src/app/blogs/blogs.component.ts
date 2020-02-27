@@ -3,6 +3,9 @@ import { Blog } from '../blog';
 import { BlogService } from '../blog.service';
 import { SoliderCommunicationService } from '../solider-communication.service';
 import { Observable, fromEvent } from 'rxjs';
+
+import { ajax } from 'rxjs/ajax';
+import { debounceTime, distinctUntilChanged, filter, map, switchMap } from 'rxjs/operators';
 @Component({
   selector: 'app-blogs',
   templateUrl: './blogs.component.html',
